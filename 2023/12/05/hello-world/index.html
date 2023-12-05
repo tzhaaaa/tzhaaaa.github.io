@@ -237,37 +237,7 @@
     
 </div>
 
-            <div>
-<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
-<script>
-    var now = new Date(); 
-    function createtime() { 
-        var grt= new Date("01/11/2023 00:00:00");//在此处修改你的建站时间
-        now.setTime(now.getTime()+250); 
-        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-        document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 "; 
-        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-    } 
-setInterval("createtime()",250);
-</script>
-</div>
-<div class="busuanzi-count">
-    <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="site-uv">
-      <i class="fa fa-user"></i>
-      访问量 <span class="busuanzi-value" id="busuanzi_value_site_uv"></span> 次
-      <span class="post-meta-divider"> | </span>
-    </span>
-    <span class="site-uv">
-      <i class="fa fa-eye"></i>
-      总访客 <span class="busuanzi-value" id="busuanzi_value_site_pv"></span> 人
-    </span>
-</div>
+            
 
 <footer id="footer">
     <div id="footer-wrap">
@@ -285,6 +255,39 @@ setInterval("createtime()",250);
         </div>
         
     </div>
+    <div>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("01/11/2023 00:00:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+
+    <div class="busuanzi-count">
+        <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span class="site-uv">
+        <i class="fa fa-user"></i>
+        访问量 <span class="busuanzi-value" id="busuanzi_value_site_uv"></span> 次
+        <span class="post-meta-divider"> | </span>
+        </span>
+        <span class="site-uv">
+        <i class="fa fa-eye"></i>
+        总访客 <span class="busuanzi-value" id="busuanzi_value_site_pv"></span> 人
+        </span>
+    </div>
+
 </footer>
 
         </div>
@@ -305,4 +308,47 @@ setInterval("createtime()",250);
 
     
 </body>
+<p style="text-align:center" id="saintwei"></p>
+<script>
+   var saintwei = function (r) {
+       function t() {
+           return b[Math.floor(Math.random() * b.length)]
+       }
+       function e() {
+           return String.fromCharCode(94 * Math.random() + 33)
+       }
+       function n(r) {
+           for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+               var l = document.createElement("span");
+               l.textContent = e(), l.style.color = t(), n.appendChild(l)
+           }
+           return n
+       }
+       function i() {
+           var t = o[c.skillI];
+           c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+       }
+       var l = " Hi. ",
+           o = ["Welcome to my blog", "世界本就如此艰难，何必还要让它更艰难呢", "你若盛开，蝴蝶自来；你若精彩，天自安排", "Are You OK", "转身变成一只猫"].map(function (r) {
+               return r + "."
+           }),
+           a = 2,
+           g = 1,
+           s = 5,
+           d = 75,
+           b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+           c = {
+               text: "",
+               prefixP: -s,
+               skillI: 0,
+               skillP: 0,
+               direction: "forward",
+               delay: a,
+               step: g
+           };
+       i()
+   };
+   saintwei(document.getElementById('saintwei'));
+</script>
+
 </html>
