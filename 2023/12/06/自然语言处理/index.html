@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/cursor.min.css">
     <script src="/js/cursor.min.js"></script>
     <meta charset="utf-8" />
-    <title> | Tian</title>
+    <title>自然语言处理复习 | Tian</title>
     <meta name="author" content="Jason Tian" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -169,7 +169,7 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1></h1>
+        <h1>自然语言处理复习</h1>
     </div>
     <div class="info">
         <span class="date">
@@ -179,82 +179,166 @@
             2023/12/6
         </span>
         
+        <span class="category">
+            <a href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                知识点
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/NLP/" style="color: #00bcd4">NLP</a>
+            </span>
+            
+        </span>
         
     </div>
     
     <div class="content" v-pre>
-        <h1>自然语言处理复习</h1>
-<h2 id="1-自然语言概述">1. 自然语言概述</h2>
-<h3 id="自然语言处理定义">自然语言处理定义</h3>
-<h3 id="自然语言处理技术">自然语言处理技术</h3>
-<h3 id="自然语言理解">自然语言理解</h3>
-<h3 id="自然语言生成">自然语言生成</h3>
-<h3 id="自然语言处理面临的问题">自然语言处理面临的问题</h3>
-<h3 id="自然语言处理应用场景">自然语言处理应用场景</h3>
-<h3 id="NLP任务、流程">NLP任务、流程</h3>
-<h3 id="NLP工具">NLP工具</h3>
-<h3 id="NLP语料">NLP语料</h3>
+        <p>自然语言处理复习</p>
+<span id="more"></span>
+<h3 id="1-自然语言概述">1. 自然语言概述</h3>
+<ul>
+<li>自然语言处理定义</li>
+<li>自然语言处理技术</li>
+<li>自然语言理解</li>
+<li>自然语言生成</li>
+<li>自然语言处理面临的问题</li>
+<li>自然语言处理应用场景</li>
+<li>NLP任务、流程</li>
+<li>NLP工具</li>
+<li>NLP语料</li>
+</ul>
 <h2 id="2-中文分词与词性标注">2. 中文分词与词性标注</h2>
-<h3 id="中文分词">中文分词</h3>
-<h3 id="中文分析概念">中文分析概念</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Jieba分词的三种模式及代码</span><br></pre></td></tr></table></figure>
-<h3 id="词性标注">词性标注</h3>
-<h3 id="词性标注概念">词性标注概念</h3>
-<h3 id="常见的词性列表">常见的词性列表</h3>
-<h3 id="词性标注工具">词性标注工具</h3>
-<h3 id="词性标注的难点">词性标注的难点</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">词性标注的方法-Jieba代码</span><br></pre></td></tr></table></figure>
+<ul>
+<li>中文分词</li>
+<li>中文分析概念
+<ul>
+<li>Jieba分词的三种模式及代码</li>
+</ul>
+</li>
+<li>词性标注</li>
+<li>词性标注概念</li>
+<li>常见的词性列表</li>
+<li>词性标注工具</li>
+<li>词性标注的难点
+<ul>
+<li>词性标注的方法-Jieba代码</li>
+</ul>
+</li>
+</ul>
 <h2 id="3-基于情感词典的文本情感分析">3. 基于情感词典的文本情感分析</h2>
-<h3 id="情感分析的概念">情感分析的概念</h3>
-<h3 id="情感分析的分类">情感分析的分类</h3>
-<h3 id="按文本级别分类">按文本级别分类</h3>
-<h3 id="按任务分类">按任务分类</h3>
-<h3 id="情感分类">情感分类</h3>
-<h3 id="情感分类方法">情感分类方法</h3>
-<h3 id="评估指标">评估指标</h3>
-<h3 id="实验代码">实验代码</h3>
+<ul>
+<li>情感分析的概念</li>
+<li>情感分析的分类</li>
+<li>按文本级别分类</li>
+<li>按任务分类</li>
+<li>情感分类</li>
+<li>情感分类方法</li>
+<li>评估指标</li>
+</ul>
 <h2 id="4-基于K-means的短文本聚类">4.基于K-means的短文本聚类</h2>
-<h3 id="文本聚类概念">文本聚类概念</h3>
-<h3 id="常见的文本聚类算法">常见的文本聚类算法</h3>
-<h3 id="文本聚类流程">文本聚类流程</h3>
-<h3 id="文本预处理">文本预处理</h3>
-<h3 id="文本表示">文本表示</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">one-hot编码</span><br><span class="line">整数编码</span><br><span class="line">tf-idf</span><br><span class="line">Word2Vec</span><br><span class="line">Kmeans算法流程、评估指标、优缺点</span><br><span class="line">实验代码</span><br></pre></td></tr></table></figure>
+<ul>
+<li>文本聚类概念</li>
+<li>常见的文本聚类算法</li>
+<li>文本聚类流程</li>
+<li>文本预处理</li>
+<li>文本表示
+<ul>
+<li>one-hot编码</li>
+<li>整数编码</li>
+<li>tf-idf</li>
+<li>Word2Vec</li>
+</ul>
+</li>
+<li>Kmeans算法流程、评估指标、优缺点</li>
+</ul>
 <h2 id="5-基于LDA主题模型的关键词提取">5.基于LDA主题模型的关键词提取</h2>
-<h3 id="关键词提取定义">关键词提取定义</h3>
-<h3 id="关键词提取的方法">关键词提取的方法</h3>
-<h3 id="LDA主题模型的两个假设">LDA主题模型的两个假设</h3>
-<h3 id="LDA的输入与输出">LDA的输入与输出</h3>
-<h3 id="LDA的训练流程">LDA的训练流程</h3>
-<h3 id="实验代码-2">实验代码</h3>
+<ul>
+<li>关键词提取定义</li>
+<li>关键词提取的方法</li>
+<li>LDA主题模型的两个假设</li>
+<li>LDA的输入与输出</li>
+<li>LDA的训练流程</li>
+</ul>
 <h2 id="6-基于TextCNN的文本分类">6.基于TextCNN的文本分类</h2>
-<h3 id="文本分类的定义">文本分类的定义</h3>
-<h3 id="文本分类常见算法">文本分类常见算法</h3>
-<h3 id="文本预处理流程">文本预处理流程</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TextCNN</span><br></pre></td></tr></table></figure>
-<h3 id="一维卷积、池化">一维卷积、池化</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">TextCNN模型结构及原理</span><br><span class="line">TextCNN变种</span><br><span class="line">实验代码</span><br></pre></td></tr></table></figure>
+<ul>
+<li>文本分类的定义</li>
+<li>文本分类常见算法</li>
+<li>文本预处理流程</li>
+<li>TextCNN
+<ul>
+<li>一维卷积、池化</li>
+<li>TextCNN模型结构及原理</li>
+<li>TextCNN变种</li>
+</ul>
+</li>
+</ul>
 <h2 id="7-基于FastText的文本分类">7.基于FastText的文本分类</h2>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Word2Vec</span><br></pre></td></tr></table></figure>
-<h3 id="文本相似度">文本相似度</h3>
-<h3 id="文本表示-2">文本表示</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Word2Vec的两种结构</span><br><span class="line">FastText</span><br><span class="line">FastText模型改进点</span><br><span class="line">FastText优点</span><br><span class="line">实验代码</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Word2Vec</li>
+<li>文本相似度</li>
+<li>文本表示
+<ul>
+<li>Word2Vec的两种结构</li>
+<li>FastText</li>
+<li>FastText模型改进点</li>
+<li>FastText优点</li>
+</ul>
+</li>
+</ul>
 <h2 id="8-基于Seq2Seq的问答系统">8.基于Seq2Seq的问答系统</h2>
-<h3 id="问答系统的概念">问答系统的概念</h3>
-<h3 id="经典的问答系统">经典的问答系统</h3>
-<h3 id="问答系统的分类">问答系统的分类</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Seq2Seq</span><br><span class="line">Encoder-Decoder</span><br><span class="line">实验代码</span><br></pre></td></tr></table></figure>
+<ul>
+<li>问答系统的概念</li>
+<li>经典的问答系统</li>
+<li>问答系统的分类</li>
+<li>Seq2Seq</li>
+<li>Encoder-Decoder</li>
+</ul>
 <h2 id="9、基于Seq2Seq-Attention的翻译系统">9、基于Seq2Seq+Attention的翻译系统</h2>
-<h3 id="翻译系统">翻译系统</h3>
-<h3 id="翻译系统定义">翻译系统定义</h3>
-<h3 id="发展历程">发展历程</h3>
-<h3 id="翻译系统方法分类">翻译系统方法分类</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Attention</span><br></pre></td></tr></table></figure>
-<h3 id="计算公式">计算公式</h3>
-<h3 id="自注意力机制">自注意力机制</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Attention与Encoder-Decoder</span><br><span class="line">Attention特点</span><br><span class="line">文本因果卷积</span><br><span class="line">实验代码</span><br></pre></td></tr></table></figure>
+<ul>
+<li>翻译系统</li>
+<li>翻译系统定义</li>
+<li>发展历程</li>
+<li>翻译系统方法分类</li>
+<li>Attention</li>
+<li>计算公式</li>
+<li>自注意力机制</li>
+<li>Attention与Encoder-Decoder</li>
+<li>Attention特点</li>
+<li>文本因果卷积</li>
+</ul>
 <h2 id="10-基于Transformer的翻译系统">10.基于Transformer的翻译系统</h2>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">transformer结构</span><br><span class="line">多头注意力</span><br><span class="line">位置编码</span><br><span class="line">掩码注意力</span><br><span class="line">编解码注意力</span><br><span class="line">残差连接与层归一化</span><br><span class="line">实验代码</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>Transformer结构</p>
+</li>
+<li>
+<p>多头注意力</p>
+</li>
+<li>
+<p>位置编码</p>
+</li>
+<li>
+<p>掩码注意力</p>
+</li>
+<li>
+<p>编解码注意力</p>
+</li>
+<li>
+<p>残差连接与层归一化</p>
+</li>
+</ul>
 
     </div>
     
