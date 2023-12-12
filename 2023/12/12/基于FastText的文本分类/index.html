@@ -212,7 +212,8 @@
 <p>• 给标签加上&quot;<strong>label</strong>&quot;前缀</p>
 <p>导入包、训练模型 • import fasttext • model = fasttext.train_supervised(input=“train.txt”)</p>
 <p>保存模型、加载模型 • model.save_model(“model.bin”) • model.load_model(“model.bin”)</p>
-<p>模型评估、测试推理 • model.test(input=“val.txt”) • model.predict(test_data)<img src="D:%5Chexo-theme-particlex-master%5C12%5D%5DL9~7YPK%5D$S9TVF0ZO7C.png" alt=""></p>
+<p>模型评估、测试推理 • model.test(input=“val.txt”) • model.predict(test_data)</p>
+<p><img src="/images/2.png" alt="图片"></p>
 <h2 id="数据处理">数据处理</h2>
 <p>执行data_process.py文件，具体步骤如下：</p>
 <ol>
@@ -229,24 +230,44 @@
 <p>抽取倒数500行作为验证集</p>
 </li>
 <li>
-<p>使用Pandas将处理好的训练集与验证集保存为txt格式<img src="C:%5CUsers%5CLENOVO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231212235904720.png" alt="image-20231212235904720"></p>
-<p>![](C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20231212235852713.png</p>
+<p>使用Pandas将处理好的训练集与验证集保存为txt格式</p>
+<p><img src="/images/1.png" alt="图片"></p>
 <h2 id="模型训练">模型训练</h2>
 <p>执行train.py文件，具体步骤如下：</p>
 <ol>
-<li>导入fasttext库</li>
-<li>使用fasttext.train_supervised()训练模型，并设置相应的参数</li>
-<li>使用model.save_model()将训练好的模型保存起来</li>
-<li>使用model.test()训练好的模型对验证集进行评估</li>
-<li>计算F1值，并将所有的评估指标打印出来<img src="C:%5CUsers%5CLENOVO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231213000039345.png" alt="image-20231213000039345"></li>
+<li>
+<p>导入fasttext库</p>
+</li>
+<li>
+<p>使用fasttext.train_supervised()训练模型，并设置相应的参数</p>
+</li>
+<li>
+<p>使用model.save_model()将训练好的模型保存起来</p>
+</li>
+<li>
+<p>使用model.test()训练好的模型对验证集进行评估</p>
+</li>
+<li>
+<p>计算F1值，并将所有的评估指标打印出来</p>
+<p><img src="/images/3.png" alt="图片"></p>
+</li>
 </ol>
 <h2 id="预测推理">预测推理</h2>
 <p>执行predict.py文件，具体步骤如下：</p>
 <ol>
-<li>导入fasttext、Pandas库，使用fasttext加载训练好的模型，使用Pandas读取测试集</li>
-<li>将预测集中文本列取出，并将数据格式转换为列表，然后调用model.predict()进行 预测</li>
-<li>对预测结果进行处理，并将处理后的预测结果作为新的列添加至预测集中，列名 为“label_pre”</li>
-<li>将预测结果写出到output路径中，文件名为“ predict.csv”<img src="C:%5CUsers%5CLENOVO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20231213000243457.png" alt="image-20231213000243457"></li>
+<li>
+<p>导入fasttext、Pandas库，使用fasttext加载训练好的模型，使用Pandas读取测试集</p>
+</li>
+<li>
+<p>将预测集中文本列取出，并将数据格式转换为列表，然后调用model.predict()进行 预测</p>
+</li>
+<li>
+<p>对预测结果进行处理，并将处理后的预测结果作为新的列添加至预测集中，列名 为“label_pre”</p>
+</li>
+<li>
+<p>将预测结果写出到output路径中，文件名为“ predict.csv”</p>
+<p><img src="/images/4.png" alt="图片"></p>
+</li>
 </ol>
 </li>
 </ol>
