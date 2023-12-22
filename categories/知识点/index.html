@@ -19,7 +19,11 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <canvas id="fireworks" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"></canvas>
+    <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
     
+
+
     <link rel="preconnect" href="https://cdn.staticfile.org" />
 <script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
 <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
@@ -53,9 +57,16 @@
 <script type="text/javascript">
     var OriginTitile=document.title,st;
 	document.addEventListener("visibilitychange",function(){
-        document.hidden?(document.title="o(இ௰இ)怎么就走了！",clearTimeout(st)):(document.title="☆*o(≧▽≦)o*☆欢迎回来！",st=setTimeout(function(){document.title=OriginTitile},3e3))
+        document.hidden?(document.title="o(இ௰இ)怎么走了呢！",clearTimeout(st)):(document.title="☆*o(≧▽≦)o*☆欢迎回来呦！",st=setTimeout(function(){document.title=OriginTitile},3e3))
     })
 </script>
+
+<canvas
+    id="fireworks"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"
+></canvas>
+<script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+<script src="/js/fireworks.min.js"></script>
 
 
 <body>
@@ -210,7 +221,7 @@
                     
                     <span class="tag">
                         
-                        <a href="/tags/NLP/" style="color: #00bcd4">NLP</a>
+                        <a href="/tags/NLP/" style="color: #ffa2c4">NLP</a>
                     </span>
                     
                 </span>
@@ -325,6 +336,41 @@ setInterval("createtime()",250);
        i()
    };
    saintwei(document.getElementById('saintwei'));
+</script>
+<script type="text/javascript">
+    var a_idx = 0;
+    jQuery(document).ready(function ($) {
+        $("body").click(function (e) {
+            var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信",
+                              "友善");
+            var $i = $("<span/>").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+                y = e.pageY;
+            $i.css({
+                "z-index": 5,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "color": "#FF0000"
+            });
+            $("body").append($i);
+            $i.animate({
+                "top": y - 180,
+                "opacity": 0
+            },
+                       3000,
+                       function () {
+                $i.remove();
+            });
+        });
+        setTimeout('delay()', 2000);
+    });
+
+    function delay() {
+        $(".buryit").removeAttr("onclick");
+    }
 </script>
 
 </html>
