@@ -45,6 +45,8 @@
 
 
 
+<script src="/js/lib/search.js"></script>
+
 
 
 <link rel="stylesheet" href="/css/main.css" />
@@ -166,6 +168,8 @@
             
 <div id="archives">
     
+    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
+    
     <div id="timeline-wrap" ref="timeline">
         
         <div class="timeline" data-title="自然语言处理复习">
@@ -195,7 +199,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/NLP/" style="color: #ff7d73">NLP</a>
+                            <a href="/tags/NLP/" style="color: #ffa2c4">NLP</a>
                         </span>
                         
                     </span>
