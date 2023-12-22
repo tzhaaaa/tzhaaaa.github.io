@@ -286,7 +286,7 @@ setInterval("createtime()",250);
            c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
        }
        var l = " Hi. ",
-           o = ["Welcome to my blog", "世界本就如此艰难，何必还要让它更艰难呢", "你若盛开，蝴蝶自来；你若精彩，天自安排", "Are You OK", "转身变成一只猫"].map(function (r) {
+           o = ["Welcome to my blog", "世界本就如此艰难，何必还要让它更艰难呢", "你若盛开，蝴蝶自来；你若精彩，天自安排", "从来没有真正的绝境, 只有心灵的迷途", "即使爬到最高的山上，一次也只能脚踏实地地迈一步"].map(function (r) {
                return r + "."
            }),
            a = 2,
